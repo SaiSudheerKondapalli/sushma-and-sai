@@ -45,7 +45,7 @@ main { overflow: hidden; }
 .invitation-line .sparkle { font-size:1rem; }
 .infinity-title { margin:22px 0 12px; }
 .infinity-title h1 { margin:0; max-width:610px; color:#681a2c; font-size:clamp(3.6rem,7.2vw,6.8rem); font-weight:400; line-height:.86; letter-spacing:-.05em; }
-.infinity-title h1 span { display:block; margin-top:.04em; color:#b9862c; font-family:Georgia,"Times New Roman",serif; font-size:1.42em; font-style:normal; line-height:.72; letter-spacing:0; text-shadow:0 7px 26px rgba(185,134,44,.2); animation:infinity-word-glow 3s ease-in-out infinite; }
+.infinity-title h1 span { display:block; width:max-content; margin:.04em auto 0; color:#b9862c; font-family:Georgia,"Times New Roman",serif; font-size:1.42em; font-style:normal; line-height:.72; letter-spacing:0; transform-origin:center; text-shadow:0 7px 26px rgba(185,134,44,.2); animation:infinity-symbol-dance 3.2s ease-in-out infinite; will-change:transform,text-shadow; }
 .couple-names { margin:15px 0 7px; color:#681a2c; font-size:clamp(1.15rem,2vw,1.45rem); letter-spacing:.08em; }
 .couple-names span { padding:0 .35em; color:#d1a64c; animation:heart-beat 2.2s ease-in-out infinite; }
 .full-names { margin-top:0; color:#6f4b4d; font-family:Arial,sans-serif; font-size:.8rem; letter-spacing:.08em; text-transform:uppercase; }
@@ -135,7 +135,12 @@ footer p { margin:13px 0 7px; font-size:1.35rem; } footer span { font:400 .72rem
 @keyframes petal-fall { 0% { transform:translate3d(0,-5vh,0) rotate(0); } 50% { transform:translate3d(35px,52vh,0) rotate(260deg); } 100% { transform:translate3d(-20px,108vh,0) rotate(560deg); } }
 @keyframes bob { 50% { transform:translateY(5px); } }
 @keyframes spin { to { transform:rotate(360deg); } }
-@keyframes infinity-word-glow { 0%,100% { text-shadow:0 7px 26px rgba(185,134,44,.18); } 50% { text-shadow:0 7px 32px rgba(185,134,44,.38); } }
+@keyframes infinity-symbol-dance {
+  0%,100% { transform:translateY(0) rotate(0deg) scale(1); text-shadow:0 7px 26px rgba(185,134,44,.18); }
+  25% { transform:translateY(-4px) rotate(-3deg) scale(1.04); }
+  50% { transform:translateY(0) rotate(0deg) scale(1.1); text-shadow:0 8px 38px rgba(185,134,44,.5); }
+  75% { transform:translateY(-4px) rotate(3deg) scale(1.04); }
+}
 @keyframes heart-beat { 0%,100% { opacity:.72; transform:scale(1); } 50% { opacity:1; transform:scale(1.16); } }
 
 @media (max-width:900px) {
