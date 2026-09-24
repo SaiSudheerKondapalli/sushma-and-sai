@@ -43,15 +43,9 @@ main { overflow: hidden; }
 .invitation-line, .eyebrow { font-family:Arial,sans-serif; text-transform:uppercase; letter-spacing:.17em; font-size:.76rem; font-weight:700; color:#98631c; }
 .invitation-line { display:flex; gap:9px; align-items:center; }
 .invitation-line .sparkle { font-size:1rem; }
-.infinity-title { margin:18px 0 10px; }
-.love-equation { display:flex; align-items:center; gap:clamp(7px,1.15vw,16px); color:#681a2c; font-size:clamp(3.7rem,7.4vw,7rem); line-height:.82; letter-spacing:-.045em; white-space:nowrap; }
-.love-equation .initial { font-weight:400; }
-.love-equation .operator, .love-equation .equals { color:#b9862c; font-family:"Brush Script MT","Segoe Script",cursive; font-size:.58em; font-weight:700; }
-.love-equation .eight { display:inline-block; color:#9c2942; animation:eight-dance 4s ease-in-out infinite; }
-.love-equation .becomes { color:#c19542; font-family:"Brush Script MT","Segoe Script",cursive; font-size:.48em; letter-spacing:0; }
-.love-equation .infinity-symbol { display:inline-block; color:#b9862c; font-size:1.04em; text-shadow:0 7px 24px rgba(185,134,44,.2); animation:infinity-glow 2.8s ease-in-out infinite; }
-.infinity-title h1 { margin:18px 0 0; color:#681a2c; font-size:clamp(2.25rem,4.4vw,4.25rem); font-weight:400; line-height:.95; letter-spacing:-.035em; }
-.infinity-title h1 span { color:#b9862c; font-family:"Brush Script MT","Segoe Script",cursive; font-size:1.18em; font-style:italic; }
+.infinity-title { margin:22px 0 12px; }
+.infinity-title h1 { margin:0; max-width:610px; color:#681a2c; font-size:clamp(3.6rem,7.2vw,6.8rem); font-weight:400; line-height:.86; letter-spacing:-.05em; }
+.infinity-title h1 span { display:block; margin-top:.08em; color:#b9862c; font-family:"Brush Script MT","Segoe Script",cursive; font-size:1.08em; font-style:italic; letter-spacing:-.025em; text-shadow:0 7px 26px rgba(185,134,44,.2); animation:infinity-word-glow 3s ease-in-out infinite; }
 .couple-names { margin:15px 0 7px; color:#681a2c; font-size:clamp(1.15rem,2vw,1.45rem); letter-spacing:.08em; }
 .couple-names span { padding:0 .35em; color:#d1a64c; animation:heart-beat 2.2s ease-in-out infinite; }
 .full-names { margin-top:0; color:#6f4b4d; font-family:Arial,sans-serif; font-size:.8rem; letter-spacing:.08em; text-transform:uppercase; }
@@ -141,17 +135,16 @@ footer p { margin:13px 0 7px; font-size:1.35rem; } footer span { font:400 .72rem
 @keyframes petal-fall { 0% { transform:translate3d(0,-5vh,0) rotate(0); } 50% { transform:translate3d(35px,52vh,0) rotate(260deg); } 100% { transform:translate3d(-20px,108vh,0) rotate(560deg); } }
 @keyframes bob { 50% { transform:translateY(5px); } }
 @keyframes spin { to { transform:rotate(360deg); } }
-@keyframes eight-dance { 0%,100% { transform:rotate(0deg) translateY(0); } 50% { transform:rotate(-7deg) translateY(-2px); } }
-@keyframes infinity-glow { 0%,100% { transform:scale(1); text-shadow:0 7px 24px rgba(185,134,44,.18); } 50% { transform:scale(1.08); text-shadow:0 7px 30px rgba(185,134,44,.42); } }
+@keyframes infinity-word-glow { 0%,100% { text-shadow:0 7px 26px rgba(185,134,44,.18); } 50% { text-shadow:0 7px 32px rgba(185,134,44,.38); } }
 @keyframes heart-beat { 0%,100% { opacity:.72; transform:scale(1); } 50% { opacity:1; transform:scale(1.16); } }
 
 @media (max-width:900px) {
-  .hero-grid { grid-template-columns:1fr; padding-top:48px; text-align:center; }.hero-copy { padding:0; }.invitation-line,.primary-cta { justify-content:center; }.hero-message { margin-left:auto; margin-right:auto; }.love-equation { justify-content:center; }.infinity-title h1 { text-align:center; }.countdown { justify-content:center; }.portrait-wrap { width:min(88%,480px); }.scroll-note { display:none; }
+  .hero-grid { grid-template-columns:1fr; padding-top:48px; text-align:center; }.hero-copy { padding:0; }.invitation-line,.primary-cta { justify-content:center; }.hero-message { margin-left:auto; margin-right:auto; }.infinity-title h1 { margin-left:auto; margin-right:auto; text-align:center; }.countdown { justify-content:center; }.portrait-wrap { width:min(88%,480px); }.scroll-note { display:none; }
   .events-grid { grid-template-columns:1fr; }.rsvp-shell { grid-template-columns:1fr; }.rsvp-intro { border-right:0; border-bottom:1px solid rgba(229,188,98,.36); text-align:center; }.rsvp-ornament { justify-content:center; }
 }
 @media (max-width:600px) {
   .hero::before { inset:7px; }.topbar { width:calc(100% - 34px); padding:20px 0; }.topbar > div { gap:14px; }.topbar > div a:first-child { display:none; }
-  .hero-grid { width:calc(100% - 38px); padding:40px 0 68px; gap:38px; }.love-equation { font-size:clamp(3.15rem,15vw,5.15rem); gap:clamp(5px,2vw,10px); }.infinity-title h1 { font-size:clamp(2rem,10vw,3rem); }.couple-names { font-size:1.05rem; }.full-names { font-size:.65rem; line-height:1.6; }.hero-message { font-size:1rem; }.wedding-date-pill { font-size:.75rem; }.countdown-item { min-width:0; flex:1; padding:9px 8px; }.countdown-item strong { font-size:1.3rem; }
+  .hero-grid { width:calc(100% - 38px); padding:40px 0 68px; gap:38px; }.infinity-title h1 { font-size:clamp(3.2rem,16vw,5rem); }.couple-names { font-size:1.05rem; }.full-names { font-size:.65rem; line-height:1.6; }.hero-message { font-size:1rem; }.wedding-date-pill { font-size:.75rem; }.countdown-item { min-width:0; flex:1; padding:9px 8px; }.countdown-item strong { font-size:1.3rem; }
   .portrait-badge { width:78px; height:78px; right:-4%; }.portrait-badge span { font-size:1.55rem; }
   .events-section,.rsvp-section { padding:78px 17px; }.event-card { grid-template-columns:62px 1fr; min-height:380px; }.event-body { padding:23px 17px 18px; }.venue-line { align-items:start; flex-direction:column; }.event-title-row h3 { font-size:1.7rem; }
   .rsvp-intro { padding:42px 25px; }.rsvp-form { padding:32px 20px; }.two-columns,.three-columns,.event-choice-grid { grid-template-columns:1fr; }.event-choice-grid { gap:8px; }
