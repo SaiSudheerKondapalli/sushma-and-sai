@@ -45,7 +45,7 @@ main { overflow: hidden; }
 .invitation-line .sparkle { font-size:1rem; }
 .infinity-title { margin:22px 0 12px; }
 .infinity-title h1 { margin:0; max-width:610px; color:#681a2c; font-size:clamp(3.6rem,7.2vw,6.8rem); font-weight:400; line-height:.86; letter-spacing:-.05em; }
-.infinity-title h1 span { display:block; margin-top:.08em; color:#b9862c; font-family:"Brush Script MT","Segoe Script",cursive; font-size:1.08em; font-style:italic; letter-spacing:-.025em; text-shadow:0 7px 26px rgba(185,134,44,.2); animation:infinity-word-glow 3s ease-in-out infinite; }
+.infinity-title h1 span { display:block; margin-top:.04em; color:#b9862c; font-family:Georgia,"Times New Roman",serif; font-size:1.42em; font-style:normal; line-height:.72; letter-spacing:0; text-shadow:0 7px 26px rgba(185,134,44,.2); animation:infinity-word-glow 3s ease-in-out infinite; }
 .couple-names { margin:15px 0 7px; color:#681a2c; font-size:clamp(1.15rem,2vw,1.45rem); letter-spacing:.08em; }
 .couple-names span { padding:0 .35em; color:#d1a64c; animation:heart-beat 2.2s ease-in-out infinite; }
 .full-names { margin-top:0; color:#6f4b4d; font-family:Arial,sans-serif; font-size:.8rem; letter-spacing:.08em; text-transform:uppercase; }
